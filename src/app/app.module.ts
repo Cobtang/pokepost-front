@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { PokemonPageComponent } from './component/pokemon-page/pokemon-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LocationComponent } from './component/location/location.component';
+import { PokemonService } from './services/pokemon.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { LocationComponent } from './component/location/location.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
