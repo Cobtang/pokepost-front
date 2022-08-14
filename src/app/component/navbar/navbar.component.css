@@ -23,49 +23,30 @@
 	justify-content: center;
 }
 
-.navAnchor {
-	width: auto;
-	height: auto;
-	border-radius: 18px 18px 18px 18px;
-	transition: all .05s ease-in;
-}
-
-.navAnchor:active {
-    transform: scale(1.05);
-}
-
-a.navAnchor:hover {
-	display: flex;
-	margin: auto;
-	justify-content: center;
-	filter: drop-shadow(5px 5px 4px rgba(0, 132, 255, 0.651));
-	transform: scale(1.1);
-}
-
-a.navAnchor {
-	display: flex;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-	justify-content: center;
-	border: 3px;
-	min-height: 100%;
-	min-width: 100%;
-}
-
 .navDiv {
 	margin: auto;
 	width: auto;
 }
 
 .navImg {
+	cursor: pointer;
 	width: auto;
 	height:auto;
 	min-width: 4vw;
 	max-width: 15vw;
 	max-height: 6vh;
 	align-self: center;
-	transition: 0.5s ease-in-out;
+	transition: 0.05s ease-in-out;
 }
+
+.navImg:hover {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	filter: drop-shadow(5px 5px 4px rgba(0, 132, 255, 0.651));
+    transform: scale(1.05);
+}
+
 
 .logoImg {
 	width: auto;

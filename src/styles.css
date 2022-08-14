@@ -1,13 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
+    --hp-green: rgb(81, 207, 13);
+    --hp-green-bright: rgb(143, 255, 83);
+    --hp-green-dark: rgb(68, 172, 13);
+    --attack-red: rgb(190, 21, 21);
+    --attack-red-bright: rgb(236, 47, 47);
+    --attack-red-dark: rgb(138, 13, 13);
 	--blue: #284fce;
+    --defense-blue: rgb(0, 94, 255);
+    --defense-blue-bright: rgb(62, 133, 255);
+    --defense-blue-dark: rgb(0, 66, 180);
+    --specatk-orange: rgb(255, 153, 0);
+    --specatk-orange-bright: rgb(255, 194, 61);
+    --specatk-orange-dark: rgb(206, 99, 0);
+    --specdef-purple: rgb(168, 23, 205);
+    --specdef-purple-bright: rgb(218, 68, 255);
+    --specdef-purple-dark: rgb(138, 17, 168);
+    --speed-yellow: rgb(255, 244, 39);
+    --speed-yellow-bright: rgb(255, 246, 74);
+    --speed-yellow-dark: rgb(223, 201, 1);
+    --blue-bright: #3e81e6;
 	--soft-blue: rgb(96, 167, 196);
+    --spheal-blue-bright:#9ec9f8;
     --spheal-blue:#7aa8d9;
     --spheal-blue-semidark:#6d95c0;
     --spheal-blue-dark:#4472a3;
 	--pikachu-yellow-bright: #fffc3e;
 	--pikachu-yellow: #fff235;
-	--pikachu-yellow-dark: #e0cd22;
+	--pikachu-yellow-soft: #fff780;
+	--pikachu-yellow-soft-bright: #fffcd2;
+	--pikachu-yellow-gold: #e0cd22;
+	--pikachu-yellow-dark: #dfc13f;
 	--white: #ffffff;
 	--white-2: #f7f7f7;
 	--white-blue: #e2ecff;

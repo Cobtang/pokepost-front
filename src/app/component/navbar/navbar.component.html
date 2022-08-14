@@ -1,0 +1,47 @@
+<div class="navContainer">
+  <div id="navBar" class="navBar">
+    <div id="logo" class="navDiv" [routerLink]="['']">
+      <img 
+        class="navImg" 
+        src="assets/images/PokePost.png" 
+        alt="Home" 
+      />
+    </div>
+    <div id="pokemon" class="navDiv" [routerLink]="['pokemon-page']">
+      <img 
+        class="navImg" 
+        src="assets/images/Pokemon.png" 
+        alt="Pokemon" 
+      />
+    </div>
+    <div id="locations" class="navDiv" [routerLink]="['location']">
+      <img 
+        class="navImg" 
+        src="assets/images/Locations.png" 
+        alt="Locations" 
+      />
+    </div>
+    <div id="fanart" class="navDiv">
+      <img 
+        class="navImg" 
+        src="assets/images/Fanart.png" 
+        alt="Fan Art" 
+      />
+    </div>
+    <div id="wishlist" class="navDiv">
+      <img 
+        class="navImg" 
+        src="assets/images/Wishlist.png" 
+        alt="Wishlist" 
+      />
+    </div>
+    <div *ngIf="loggedIn" id="navUser" class="navDiv" [routerLink]="['login']">
+      <img
+        class="navImg"
+        id="log-img"
+        src="assets/images/log-in.png"
+        alt="Profile"
+      />
+    </div>
+  </div>
+</div>
