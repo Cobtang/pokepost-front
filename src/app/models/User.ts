@@ -1,9 +1,9 @@
 export default class User {
-    id: number;
-    username: string;
-    email: string;
-    role: string;
-    token: string;
+    id?: number;
+    username?: string;
+    email?: string;
+    role?: string;
+    token?: string;
 
     constructor (id: number, username: string, email: string, role: string, token: string) {
         this.id = id;

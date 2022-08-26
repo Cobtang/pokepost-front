@@ -4,10 +4,10 @@
 
 <div class="queryContainer">
   <img id="pokeball" src="assets/images/pokeball.png" alt="pokeball" />
-  <div class="querySection">
-    <input type="text" id="query" placeholder="Enter Pokemon Name or ID" />
+  <ng-container class="querySection">
+    <input [(ngModel)]="pokemonId" type="text" id="query" placeholder="Enter Pokemon Name or ID">
     <button id="searchButton">Search</button>
-  </div>
+  </ng-container>
 </div>
 <div class="page">
   <div id="pokemonContainer" class="pokemonContainer">

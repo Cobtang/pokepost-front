@@ -2,21 +2,21 @@ import Ability from './Ability';
 import PokemonMoves from './PokemonMoves';
 
 export default class Pokemon {
-    id: number;
-    name: string;
-    height: number;
-    weight: number;
-    types: string[];
-    baseStats: Map<string, number>;
-    imageUrl: string;
-    generation: number;
-    category: string;
-    description: string;
-    evolutionChain: string[];
-    locationVersions: Map<string, number>[];
-    baseExperience: number;
-    abilities: Ability[];
-    moves: PokemonMoves;
+    id?: number;
+    name?: string;
+    height?: number;
+    weight?: number;
+    types?: string[];
+    baseStats?: Map<string, number>;
+    imageUrl?: string;
+    generation?: number;
+    category?: string;
+    description?: string;
+    evolutionChain?: string[];
+    locationVersions?: Map<string, number>[];
+    baseExperience?: number;
+    abilities?: Ability[];
+    moves?: PokemonMoves;
 
     constructor (
         id: number,
