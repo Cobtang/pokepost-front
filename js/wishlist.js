@@ -17,7 +17,7 @@ function lowerCaseName(str) {
 let pokeId = 0;
 let loggedIn = false;
 let logImg = document.getElementById("log-img");
-let currentUserId = getUserId();
+let currentUserId = getId();
 let wishlistBody = document.getElementById("wishlistBody");
 
 
@@ -91,7 +91,7 @@ function postWishlist() {
     fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(pokelist) })
 }
 
-function getUserId() {
+function getId() {
     console.log("getUserId called");
     let userId = null;
     if (sessionStorage.getItem("USER_ID") == null) {

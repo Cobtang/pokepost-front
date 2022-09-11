@@ -3,7 +3,7 @@ console.log("Loaded error.js");
 /*Script Variables*/
 let logImg = document.getElementById("logImg");
 let loggedIn = false;
-let currentUserId = getUserId();
+let currentUserId = getId();
 
 /*Event Listeners*/
 logImg.onclick = function () { logStateChange(); }
@@ -12,7 +12,7 @@ logImg.onclick = function () { logStateChange(); }
  * Retrieves the user id value in the Session variable.
  * This will be used to retrieve and post data.
  */
-function getUserId() {
+function getId() {
 	console.log("getUserId called");
 	let userId = null;
 	if (sessionStorage.getItem("USER_ID") == null) {

@@ -14,11 +14,10 @@ export class PokemonPageComponent implements OnInit {
   pokemonId: string = '';
 
   constructor(private pokemonService : PokemonService, private router: Router) {
-    this.pokemonService = pokemonService;
   }
 
   ngOnInit(): void {
-
+    //
   }
 
 }

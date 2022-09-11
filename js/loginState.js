@@ -5,7 +5,7 @@ let loggedIn = sessionStorage.getItem("USER_ID");
 let logImg = document.getElementById("log-img");
 let logInImage = "images/log-in.png";
 let logOutImage = "images/Log-Out.png";
-let currentUserId = getUserId();
+let currentUserId = getId();
 
 /*Event Listeners*/
 logImg.onclick = function () { logStateChange(); }
@@ -14,7 +14,7 @@ logImg.onclick = function () { logStateChange(); }
  * Retrieves the user id value in the Session variable.
  * This will be used to retrieve and post data.
  */
- function getUserId() {
+ function getId() {
     console.log("getUserId called");
     let userId = null;
     if (loggedIn) {

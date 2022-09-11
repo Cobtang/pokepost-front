@@ -18,7 +18,7 @@ let storedFanart = new List();
 let loggedIn = sessionStorage.getItem("USER_ID");
 let logInImage = "images/log-in.png";
 let logOutImage = "images/Log-Out.png";
-let currentUserId = getUserId();
+let currentUserId = getId();
 let lastPage;
 let currentPage;
 
@@ -102,7 +102,7 @@ logImg.onclick = function () { logStateChange(); }
  * Retrieves the user id value in the Session variable.
  * This will be used to retrieve and post data.
  */
-function getUserId() {
+function getId() {
 	console.log("getUserId called");
 	let userId = null;
 	if (loggedIn) {

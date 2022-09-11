@@ -24,7 +24,7 @@ let loggedIn = sessionStorage.getItem("USER_ID");
 let logInImage = "images/log-in.png";
 let logOutImage = "images/Log-Out.png";
 let currentArtId = getArtId();
-let currentUserId = getUserId();
+let currentUserId = getId();
 let idLowerLimit, idUpperLimit;
 
 /*JSON Objects*/
@@ -118,7 +118,7 @@ function getArtId() {
  * Retrieves the user id value in the Session variable.
  * This will be used to retrieve and post data.
  */
-function getUserId() {
+function getId() {
     console.log("getUserId called");
     let userId = null;
     if (loggedIn) {
