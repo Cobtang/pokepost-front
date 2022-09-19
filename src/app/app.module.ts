@@ -10,6 +10,8 @@ import { PokemonPageComponent } from './component/pokemon-page/pokemon-page.comp
 import { MainPageComponent } from './main-page/main-page.component';
 import { LocationComponent } from './component/location/location.component';
 import { PokemonService } from './services/pokemon.service';
+import { FanartComponent } from './component/fanart/fanart.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PokemonService } from './services/pokemon.service';
     NavbarComponent,
     PokemonPageComponent,
     MainPageComponent,
-    LocationComponent
+    LocationComponent,
+    FanartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

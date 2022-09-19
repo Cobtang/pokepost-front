@@ -1,0 +1,103 @@
+body {
+	background: #6e7f80;
+	color: #f5f5dc;
+}
+
+.page {
+    display: block;
+	margin: 10% auto;
+    box-shadow: 10px 10px #00000009;
+	background: #FFFFFF;
+	color: #000000;
+	max-width: 80vw;
+	padding: 1em;
+	border-radius: 5px;
+	border-top: 0.3em solid #faf506;
+	border-bottom: 0.3em solid #27538a;
+}
+
+.thumbnail-group {
+    width: auto;
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+	max-width: 256px;
+    max-height: 256px;
+	margin: 5px;
+	border: solid 0.2em #7fffd4;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#filterOptions, #filterText, #filterDate {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+#filterTxtBx, #filterDateCal {
+	width: 80%;
+}
+
+.filterLbl, #filterSlct {
+	width: 40%;
+}
+
+#imageSection {
+	display: block;
+	width: 70%;
+	padding: 1em;
+	margin-top: 10%;
+	float: right;
+	background: #FFFFFF;
+	border-radius: 5px;
+	border-left: 0.3em solid #faf506;
+	border-bottom: 0.3em solid #4789d9;
+}
+
+.ArtDisplayLft, .ArtDisplayRgt {
+	width: 45%;
+	text-align: center;
+	color: yellow;
+	background: #222121;
+	border-left: solid 0.2em #000000;
+	border-bottom: solid 0.2em #d4cfcf;
+	margin-top: 0.8em;
+	border-radius: 5px;
+}
+
+.ArtDisplayLft {
+	clear: left;
+	float: left;
+}
+
+.ArtDisplayRgt {
+	clear: right;
+	float: right;
+}
+
+#pageSelectors {
+	clear: left;
+}
+
+#pageSelectors table {
+	margin: auto;
+}
+
+#pageSelectors td {
+	width: 33%;
+}
+
+#pgLft {
+	text-align: left;
+}
+
+#pgTitle {
+	text-align: center;
+	color: #4789d9;
+}
+
+#pgRgt {
+	text-align: right;
+}

@@ -1,6 +1,4 @@
-<div style="height:7vh;" class="header">
-
-</div>
+<div style="height:100px;" class="header"></div>
 
 <div class="queryContainer">
   <img id="pokeball" src="assets/images/pokeball.png" alt="pokeball" />
@@ -9,7 +7,7 @@
     <button id="searchButton">Search</button>
   </ng-container>
 </div>
-<div class="page">
+<ng-container *ngIf="pokemon.id == null" class="page">
   <div id="pokemonContainer" class="pokemonContainer">
     <div id="pokemon-title-div">
       <h1 id="pokemon-title" style="font-size: 64px; margin-bottom: 0px">
@@ -102,28 +100,24 @@
         </p>
       </div>
       <h1>Evolution</h1>
-      <div
-        class="information"
-        id="evolution-target"
-        style="justify-content: space-evenly; margin: auto"
-      >
-        <div>
+      <div class="information" id="evolution-target">
+        <div class="evolution-target-item">
           <h1>Pokemon 1</h1>
           <img src="assets/images/pokeball.png" />
         </div>
-        <div>
+        <div class="evolution-target-item">
           <h1>Pokemon 2</h1>
           <img src="assets/images/pokeball.png" />
         </div>
-        <div>
+        <div class="evolution-target-item">
           <h1>Pokemon 3</h1>
           <img src="assets/images/pokeball.png" />
         </div>
-        <div>
+        <div class="evolution-target-item">
           <h1>Pokemon 4</h1>
           <img src="assets/images/pokeball.png" />
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>

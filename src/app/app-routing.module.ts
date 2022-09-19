@@ -4,6 +4,8 @@ import { PokemonPageComponent } from './component/pokemon-page/pokemon-page.comp
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './component/login/login.component';
 import { LocationComponent } from './component/location/location.component';
+import { FanartComponent } from './component/fanart/fanart.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/main", pathMatch: "full" },
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'pokemon-page', component: PokemonPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'location', component: LocationComponent },
+  { path: 'fanart', component: FanartComponent },
+  { path: 'wishlist', component: WishlistComponent },
 ];
 
 @NgModule({
