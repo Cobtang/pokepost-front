@@ -4,7 +4,7 @@
 	<!-- <img id="pokeball" src="assets/images/pokeball.png" alt="pokeball" /> -->
 	<ng-container class="querySection">
 		<input type="text" id="query" placeholder="Enter Pokemon Name or ID" #pokemonText>
-		<button id="searchButton" (click)="searchPokemon(pokemonText)">Search</button>
+		<button id="searchButton" (click)="searchPokemon(pokemonText.value)">Search</button>
 	</ng-container>
 </div>
 <mat-progress-spinner [mode]="'indeterminate'" color="accent" *ngIf="loading$ | async"></mat-progress-spinner>

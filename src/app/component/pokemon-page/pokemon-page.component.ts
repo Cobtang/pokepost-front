@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { LoadingService } from 'src/app/services/loading.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import Pokemon from '../../models/Pokemon';
@@ -17,15 +18,24 @@ export class PokemonPageComponent implements OnInit {
 	constructor(
 		private pokemonService: PokemonService,
 		private router: Router,
+		private location: Location,
+		private activatedRoute: ActivatedRoute,
 		public loader: LoadingService
 	) {}
 
 	ngOnInit(): void {
-		//
+		this.activatedRoute.queryParams.subscribe(params => {
+			const pokemonEntry = params["pokemon"];
+			if (pokemonEntry != undefined) {
+				this.searchPokemon (pokemonEntry);
+				(<HTMLInputElement>document.getElementById('query')).value = pokemonEntry;
+			}
+	  	});
 	}
 
-	searchPokemon(searchEntry: any) {
-		this.pokemonService.getPokemon(searchEntry.value).subscribe({
+	searchPokemon(searchEntry: string) {
+		this.location.replaceState("/pokemon-page", "pokemon=" + searchEntry);
+		this.pokemonService.getPokemon(searchEntry).subscribe({
 			next: (result) => {
 				this.pokemon = result;
 			},
