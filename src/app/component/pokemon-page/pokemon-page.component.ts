@@ -6,18 +6,19 @@ import Pokemon from '../../models/Pokemon';
 @Component({
   selector: 'app-pokemon-page',
   templateUrl: './pokemon-page.component.html',
-  styleUrls: ['./pokemon-page.component.css']
+  styleUrls: ['./pokemon-page.component.css'],
 })
 export class PokemonPageComponent implements OnInit {
   title = 'Pokepost Pokemon Page';
-  pokemon: Pokemon = {};
-  pokemonId: string = '';
+  pokemon: Pokemon | undefined;
 
-  constructor(private pokemonService : PokemonService, private router: Router) {
-  }
+  constructor(private pokemonService: PokemonService, private router: Router) {}
 
   ngOnInit(): void {
     //
   }
 
+  searchPokemon(searchEntry: any) {
+    this.pokemonService.getPokemon(searchEntry);
+  }
 }
