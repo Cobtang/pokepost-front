@@ -134,3 +134,5 @@ section img {
 		0px 0px 10px 10px #ffffff,
 		0px 0px 40px 30px #fff235;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

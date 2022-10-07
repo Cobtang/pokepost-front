@@ -5,9 +5,10 @@ import PokemonMoves from './PokemonMoves';
 export default class Pokemon {
     id?: number;
     name?: string;
-    height?: number;
-    weight?: number;
-    types: string[];
+    heightInFeetInches?: string;
+    weightInPoundsString?: string;
+    primaryType: string;
+    secondaryType: string;
     baseStats: BaseStats;
     imageUrl?: string;
     generation?: number;
@@ -22,9 +23,10 @@ export default class Pokemon {
     constructor (
         id: number,
         name: string,
-        height: number,
-        weight: number,
-        types: string[],
+        heightInFeetInches: string,
+        weightInPoundsString: string,
+        primaryType: string,
+        secondaryType: string,
         baseStats: BaseStats,
         imageUrl: string,
         generation: number,
@@ -38,9 +40,10 @@ export default class Pokemon {
     ) {
         this.id = id;
         this.name = name;
-        this.height = height;
-        this.weight = weight;
-        this.types = types;
+        this.heightInFeetInches = heightInFeetInches;
+        this.weightInPoundsString = weightInPoundsString;
+        this.primaryType = primaryType;
+        this.secondaryType = secondaryType;
         this.baseStats = baseStats;
         this.imageUrl = imageUrl;
         this.generation = generation;
@@ -51,13 +54,5 @@ export default class Pokemon {
         this.baseExperience = baseExperience;
         this.abilities = abilities;
         this.moves = moves;
-    }
-
-    getPrimaryType () {
-        return this.types[0];
-    }
-
-    getSecondaryType () {
-        return this.types[1];
     }
 }

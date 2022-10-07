@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,12 @@ import { LocationComponent } from './component/location/location.component';
 import { PokemonService } from './services/pokemon.service';
 import { FanartComponent } from './component/fanart/fanart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoadingService } from './services/loading.service';
+import { NetworkInterceptor } from './interceptors/network.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,9 +33,21 @@ import { WishlistComponent } from './component/wishlist/wishlist.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule
   ],
-  providers: [PokemonService],
+  providers: [
+    PokemonService,
+    LoadingService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: NetworkInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

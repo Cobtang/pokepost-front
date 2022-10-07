@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingService } from 'src/app/services/loading.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import Pokemon from '../../models/Pokemon';
 
@@ -10,11 +11,13 @@ import Pokemon from '../../models/Pokemon';
 })
 export class PokemonPageComponent implements OnInit {
 	title = 'Pokepost Pokemon Page';
+	loading$ = this.loader.loading$;
 	pokemon: Pokemon | undefined;
 
 	constructor(
 		private pokemonService: PokemonService,
-		private router: Router
+		private router: Router,
+		public loader: LoadingService
 	) {}
 
 	ngOnInit(): void {
@@ -23,7 +26,9 @@ export class PokemonPageComponent implements OnInit {
 
 	searchPokemon(searchEntry: any) {
 		this.pokemonService.getPokemon(searchEntry.value).subscribe({
-			next: (result) => this.pokemon = result,
+			next: (result) => {
+				this.pokemon = result;
+			},
 			error: (err) => console.log("ERROR: ", err),
 			complete: () => console.log("Pokemon: ", this.pokemon)
 		}

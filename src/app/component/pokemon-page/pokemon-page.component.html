@@ -7,9 +7,10 @@
 		<button id="searchButton" (click)="searchPokemon(pokemonText)">Search</button>
 	</ng-container>
 </div>
+<mat-progress-spinner [mode]="'indeterminate'" color="accent" *ngIf="loading$ | async"></mat-progress-spinner>
 
-<ng-container *ngIf="pokemon != undefined" class="page">
-	<div id="pokemonContainer" class="pokemonContainer">
+<ng-container class="page">
+	<div *ngIf="pokemon != undefined" id="pokemonContainer" class="pokemonContainer">
 		<div id="pokemon-title-div">
 			<h1 id="pokemon-title" style="font-size: 64px; margin-bottom: 0px">
 				{{pokemon.name | titlecase}} ({{pokemon.id}}) 
@@ -58,8 +59,8 @@
 				id="type-target"
 			>
 				<h1>Type</h1>
-				<h2 class="type" id={{pokemon.getPrimaryType()}}>{{pokemon.getPrimaryType()}}</h2>
-				<h2 *ngIf="pokemon.getSecondaryType() != null" class="type" id={{pokemon.getSecondaryType()}}>{{pokemon.getSecondaryType()}}</h2>
+				<h2 class="type" id={{pokemon.primaryType}}>{{pokemon.primaryType | titlecase}}</h2>
+				<h2 *ngIf="pokemon.secondaryType != null" class="type" id={{pokemon.secondaryType}}>{{pokemon.secondaryType | titlecase}}</h2>
 				<!-- <div>
 										<h1>Weakness</h1>
 								</div>
@@ -86,10 +87,10 @@
 				style="gap: 0px; grid-template-columns: auto auto"
 			>
 				<h1 id="height-target" style="font-size: xx-large; padding: 15px">
-					Height: {{pokemon.height}}
+					Height: {{pokemon.heightInFeetInches}}
 				</h1>
 				<h1 id="weight-target" style="font-size: xx-large; padding: 15px">
-					Weight: {{pokemon.weight}}
+					Weight: {{pokemon.weightInPoundsString}}
 				</h1>
 			</div>
 			<div class="information" style="grid-template-columns: auto auto">
