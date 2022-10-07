@@ -1,4 +1,5 @@
 import Ability from './Ability';
+import BaseStats from './BaseStats';
 import PokemonMoves from './PokemonMoves';
 
 export default class Pokemon {
@@ -6,8 +7,8 @@ export default class Pokemon {
     name?: string;
     height?: number;
     weight?: number;
-    types?: string[];
-    baseStats?: Map<string, number>;
+    types: string[];
+    baseStats: BaseStats;
     imageUrl?: string;
     generation?: number;
     category?: string;
@@ -24,7 +25,7 @@ export default class Pokemon {
         height: number,
         weight: number,
         types: string[],
-        baseStats: Map<string, number>,
+        baseStats: BaseStats,
         imageUrl: string,
         generation: number,
         category: string,
@@ -50,5 +51,13 @@ export default class Pokemon {
         this.baseExperience = baseExperience;
         this.abilities = abilities;
         this.moves = moves;
+    }
+
+    getPrimaryType () {
+        return this.types[0];
+    }
+
+    getSecondaryType () {
+        return this.types[1];
     }
 }
