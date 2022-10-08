@@ -19,7 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Getting Started
 
 ### Dependencies
-* [PokéPost Web Application](https://github.com/220620-java/p2-back-pokemondb)
+* [PokéPost Web Application](https://github.com/Cobtang/pokepost-back)
 * File Hosting Server to host website
 
 ### Installing
