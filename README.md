@@ -58,5 +58,3 @@ __Team Synergy__
 * [Dylan Cooley](https://github.com/dcee96)
 * [Chan Phengaroune](https://github.com/Zoomo11)
 
-# Pokepost
-
