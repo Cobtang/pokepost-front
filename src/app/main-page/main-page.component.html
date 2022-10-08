@@ -30,9 +30,9 @@
         &emsp;Check out these cool Pokemon!
       </p>
       <ul>
-        <li><a href="pokemonPage.html?pokemon=spheal">Spheal</a></li>
-        <li><a href="pokemonPage.html?pokemon=pikachu">Pikachu</a></li>
-        <li><a href="pokemonPage.html?pokemon=klang">Klang</a></li>
+        <li><a [routerLink]="['/pokemon-page']" [queryParams]="{ pokemon: 'Spheal' }">Spheal</a></li>
+        <li><a [routerLink]="['/pokemon-page']" [queryParams]="{ pokemon: 'Pikachu' }">Pikachu</a></li>
+        <li><a [routerLink]="['/pokemon-page']" [queryParams]="{ pokemon: 'Klang' }">Klang</a></li>
       </ul>
     </div>
   </section>

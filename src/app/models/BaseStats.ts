@@ -1,27 +1,27 @@
 export default class BaseStats {
     id: number;
     hp: number;
-    atk: number;
-    def: number;
-    spAtk: number;
-    spDef: number;
-    spd: number;
+    attack: number;
+    defense: number;
+    specialAttack: number;
+    specialDefense: number;
+    speed: number;
 
     constructor (
         id: number,
         hp: number,
-        atk: number,
-        def: number,
-        spAtk: number,
-        spDef: number,
-        spd: number
+        attack: number,
+        defense: number,
+        specialAttack: number,
+        specialDefense: number,
+        speed: number
     ) {
         this.id = id;
         this.hp = hp;
-        this.atk = atk;
-        this.def = def;
-        this.spAtk = spAtk;
-        this.spDef = spDef;
-        this.spd = spd;
+        this.attack = attack;
+        this.defense = defense;
+        this.specialAttack = specialAttack;
+        this.specialDefense = specialDefense;
+        this.speed = speed;
     }
 }
