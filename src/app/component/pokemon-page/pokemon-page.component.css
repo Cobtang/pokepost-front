@@ -72,7 +72,7 @@ section img {
     background-color: var(--white-2);
     border-radius: 20px;
     box-shadow: 10px 10px #00000038;
-    margin: 125px auto;
+    margin: 125px auto 50px;
     padding: 10px;
 }
 
@@ -127,6 +127,16 @@ section img {
     z-index: 0;
 }
 
+.pokemonContainer {
+    margin: auto;
+    max-width: 1024px;
+    align-content: space-between;
+    background-color: rgba(36, 130, 213, 0.767);
+    border-radius: 15px;
+    box-shadow: 10px 10px #00000038;
+    transition: all .05s ease-in-out;
+}
+
 /* Pokemon Title */
 #pokemon-title {
     padding: 50px;
@@ -140,21 +150,12 @@ section img {
 
 /* Pokemon Sprite */
 
-.pokemonContainer {
-    margin: auto;
-    max-width: 1024px;
-    align-content: space-between;
-    background-color: rgba(36, 130, 213, 0.767);
-    border-radius: 15px;
-    box-shadow: 10px 10px #00000038;
-    transition: all .05s ease-in-out;
-}
 
 .pokemonSpriteContainer {
     width: 360px;
     background-color: #ffffff;
-    border-radius: 15px;
-    margin: 0 auto;
+    border-radius: 5px;
+    margin: 15px 15px;
 }
 
 #pokemon_picture {
@@ -162,121 +163,24 @@ section img {
     margin: auto;
 }
 
-/* Stats */
+/* Pokemon Information Block */
 
-#pokemon-stats-title {
-    padding: 0;
-}
-
-.pokemonStatsContainer {
-    margin-top: 20px;
-    border-radius: 12px;
-    background-color: rgb(95, 178, 255);
-}
-
-.statsGraphic {
+#pokemon-information {
     display: flex;
-    padding: 20px;
-    height: 200px;
-    gap: 1vw;
-    align-content: space-evenly;
-    align-items: flex-end;
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px;
+    background-color: #016BA8;
 }
 
-.stats {
-    padding: 0px;
-    display: flex;
-    width: 100%;
-    height: unset;
-    border-radius: 5px;
-    animation: scaleStat 0.25s ease-in forwards;
-    text-align: center;
-    border-bottom: 15px solid rgba(0, 0, 0, 0.308);
+#pokemon-information-group {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
 }
 
-.stats > h1 {
-    margin:auto;
-    font-size: 100%;
-    text-align:center;
-}
 
-.stats > h2 {
-    position: relative;
-    bottom: 35px;
-    left: 25%;
-    font-size: 100%;
-    text-align:center;
-}
-
-.statsLabel {
-    display: flex;
-    align-content: space-evenly;
-}
-
-.statsLabel > h1 {
-    padding: 0;
-}
-
-#hp-stat {
-    background-image: linear-gradient(to bottom, 
-        var(--hp-green-dark) 1%, 
-        var(--hp-green) 50%, 
-        var(--hp-green-bright) 90%
-    );
-    background-color: var(--hp-green);
-    height: 50px;
-}
-
-#atk-stat {
-    background-image: linear-gradient(to bottom, var(--attack-red-dark) 1%, var(--attack-red) 50%, var(--attack-red-bright) 90%);
-    background-color: rgb(190, 21, 21);
-}
-
-#def-stat {
-    background-image: linear-gradient(to bottom, var(--defense-blue-dark) 1%, var(--defense-blue) 50%, var(--defense-blue-bright) 90%);
-    background-color: rgb(0, 94, 255);
-}
-
-#spa-stat {
-    background-image: linear-gradient(to bottom, 
-        var(--specatk-orange-dark) 1%, 
-        var(--specatk-orange) 50%, 
-        var(--specatk-orange-bright) 90%
-    );
-    background-color: rgb(255, 153, 0);
-}
-
-#spf-stat {
-    background-image: linear-gradient(to bottom, 
-        var(--specdef-purple-dark) 1%, 
-        var(--specdef-purple) 50%, 
-        var(--specdef-purple-bright) 90%
-    );
-    background-color: rgb(168, 23, 205);
-}
-
-#spd-stat {
-    background-image: linear-gradient(to bottom, 
-        var(--speed-yellow-dark) 1%, 
-        var(--speed-yellow) 50%, 
-        var(--speed-yellow-bright) 90%
-    );
-    background-color: rgb(255, 244, 39);
-}
-
-@keyframes scaleStat {
-    0% {
-        height: 1px;
-        background-color: #eee;
-    }
-
-    100% {
-        height: inherit(height);
-        background-color: inherit(background-color);
-    }
-}
 
 /* Information */
 
@@ -295,10 +199,9 @@ section img {
     grid-template-rows: auto;
     text-align: center;
     justify-items: center;
-    padding: 0px;
-    margin-top: 20px;
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly; 
+    /* margin-top: 20px; */
+    /* border-radius: 12px; */
 }
 
 .information > div{
@@ -435,9 +338,122 @@ section img {
     color: rgb(240, 112, 172);
 }
 
-.information {
-    justify-content: space-evenly; 
-    margin: auto;
+
+
+/* Stats */
+
+#pokemon-stats-title {
+    padding: 0;
+}
+
+.pokemonStatsContainer {
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: rgb(95, 178, 255);
+}
+
+.statsGraphic {
+    display: flex;
+    padding: 20px;
+    height: 200px;
+    gap: 1vw;
+    align-content: space-evenly;
+    align-items: flex-end;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.stats {
+    padding: 0px;
+    display: flex;
+    width: 100%;
+    height: unset;
+    border-radius: 5px;
+    animation: scaleStat 0.25s ease-in forwards;
+    text-align: center;
+    border-bottom: 15px solid rgba(0, 0, 0, 0.308);
+}
+
+.stats > h1 {
+    margin:auto;
+    font-size: 100%;
+    text-align:center;
+}
+
+.stats > h2 {
+    position: relative;
+    bottom: 35px;
+    left: 25%;
+    font-size: 100%;
+    text-align:center;
+}
+
+.statsLabel {
+    display: flex;
+    align-content: space-evenly;
+}
+
+.statsLabel > h1 {
+    padding: 0;
+}
+
+#hp-stat {
+    background-image: linear-gradient(to bottom, 
+        var(--hp-green-dark) 1%, 
+        var(--hp-green) 50%, 
+        var(--hp-green-bright) 90%
+    );
+    background-color: var(--hp-green);
+    height: 50px;
+}
+
+#atk-stat {
+    background-image: linear-gradient(to bottom, var(--attack-red-dark) 1%, var(--attack-red) 50%, var(--attack-red-bright) 90%);
+    background-color: rgb(190, 21, 21);
+}
+
+#def-stat {
+    background-image: linear-gradient(to bottom, var(--defense-blue-dark) 1%, var(--defense-blue) 50%, var(--defense-blue-bright) 90%);
+    background-color: rgb(0, 94, 255);
+}
+
+#spa-stat {
+    background-image: linear-gradient(to bottom, 
+        var(--specatk-orange-dark) 1%, 
+        var(--specatk-orange) 50%, 
+        var(--specatk-orange-bright) 90%
+    );
+    background-color: rgb(255, 153, 0);
+}
+
+#spf-stat {
+    background-image: linear-gradient(to bottom, 
+        var(--specdef-purple-dark) 1%, 
+        var(--specdef-purple) 50%, 
+        var(--specdef-purple-bright) 90%
+    );
+    background-color: rgb(168, 23, 205);
+}
+
+#spd-stat {
+    background-image: linear-gradient(to bottom, 
+        var(--speed-yellow-dark) 1%, 
+        var(--speed-yellow) 50%, 
+        var(--speed-yellow-bright) 90%
+    );
+    background-color: rgb(255, 244, 39);
+}
+
+@keyframes scaleStat {
+    0% {
+        height: 1px;
+        background-color: #eee;
+    }
+
+    100% {
+        height: inherit(height);
+        background-color: inherit(background-color);
+    }
 }
 
 .evolution-target-item > * {
