@@ -16,49 +16,6 @@ h3 {
 	grid-template-columns: 1fr 5fr 1fr;
 }
 
-aside.aside-left{
-	float: left;
-	font-style: italic;
-}
-
-aside img {
-	max-width:100%;
-	max-height:100%;
-}
-
-aside.aside-right{
-	float: right;
-	font-style: italic;
-}
-
-aside div {
-	padding: 2em;
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-section {
-	color: black;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-
-section div {
-	padding: 2em 3em;
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-section img {
-	display: block;
-	margin-left:auto;
-	margin-right:auto;
-	width: 100%;
-}
-
 .header {
 	background-color: var(--spheal-blue);
 	width: 100%;
@@ -154,8 +111,8 @@ section img {
 .pokemonSpriteContainer {
     width: 360px;
     background-color: #ffffff;
-    border-radius: 5px;
-    margin: 15px 15px;
+    border-radius: 15px;
+    margin: 0px 15px 0px 0px;
 }
 
 #pokemon_picture {
@@ -171,7 +128,7 @@ section img {
     border-radius: 15px;
     margin: 15px;
     padding: 15px;
-    background-color: #016BA8;
+    background-color: rgb(95, 178, 255);
 }
 
 #pokemon-information-group {
@@ -206,13 +163,12 @@ section img {
 
 .information > div{
     padding: 0px;
-    text-align:center;
+    text-align: left;
 }
 
 .information > div > h1 {
     padding: 0px;
-    font-size: 150%;
-    text-align:center;
+    text-align: left;
 }
 
 .information > div > h2 {
@@ -224,9 +180,18 @@ section img {
 
 .type {
     padding: 0px;
+    margin: 15px auto;
     border-radius: 20px;
     width: 100px;
+    height: 30px;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.type-group {
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: white;
 }
 
 #normal {
@@ -347,13 +312,17 @@ section img {
 }
 
 .pokemonStatsContainer {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
     border-radius: 12px;
+    margin: 15px;
+    padding: 15px;
     background-color: rgb(95, 178, 255);
 }
 
 .statsGraphic {
     display: flex;
+    margin: 20px;
     padding: 20px;
     height: 200px;
     gap: 1vw;
@@ -368,9 +337,10 @@ section img {
     display: flex;
     width: 100%;
     height: unset;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     animation: scaleStat 0.25s ease-in forwards;
     text-align: center;
+    font-size: large;
     border-bottom: 15px solid rgba(0, 0, 0, 0.308);
 }
 
